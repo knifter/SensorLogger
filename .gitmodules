@@ -1,0 +1,9 @@
+[submodule "sensorlogger/lib/lib-soogh"]
+	path = sensorlogger/lib/lib-soogh
+	url = https://github.com/knifter/lib-soogh
+[submodule "sensorlogger/lib/lib-MAX31856"]
+	path = sensorlogger/lib/lib-MAX31856
+	url = https://github.com/knifter/lib-MAX31856.git
+[submodule "sensorlogger/lib/lib-tools"]
+	path = sensorlogger/lib/lib-tools
+	url = https://github.com/knifter/lib-tools
