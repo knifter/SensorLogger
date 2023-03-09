@@ -7,3 +7,12 @@
 [submodule "sensorlogger/lib/lib-tools"]
 	path = sensorlogger/lib/lib-tools
 	url = https://github.com/knifter/lib-tools
+[submodule "sensorlogger/lib/lib-SPIDevice"]
+	path = sensorlogger/lib/lib-SPIDevice
+	url = https://github.com/knifter/lib-SPIDevice
+[submodule "sensorlogger/lib/lib-TwoWireDevice"]
+	path = sensorlogger/lib/lib-TwoWireDevice
+	url = https://github.com/knifter/lib-TwoWireDevice
+[submodule "sensorlogger/lib/lib-MPRLS"]
+	path = sensorlogger/lib/lib-MPRLS
+	url = https://github.com/knifter/lib-MPRLS

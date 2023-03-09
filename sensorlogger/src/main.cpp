@@ -3,7 +3,6 @@
 #include "config.h"
 #include "globals.h"
 #include "settings.h"
-#include "pid.h"
 #include "screens.h"
 
 //#include "tools-log.h"
@@ -27,7 +26,6 @@ void setup()
 
     // Initialize sensors etc
 
-
     // Bootstrap
     ScreenPtr scr = std::make_shared<BootScreen>(gui);
     gui.pushScreen(scr);
@@ -39,7 +37,6 @@ void loop()
 	gui.handle(e);
 
 	setman.loop();
-	gui.loop();
 };
 
 void halt(const char* error)
@@ -47,7 +44,9 @@ void halt(const char* error)
 	gui.showMessage("HALT:", error);
 	// DBG("HALT: %s", error);
 	while(true)
-		gui.loop();
+	{
+		// gui.loop();
+	};
 };
 
 uint32_t scan_keys()
