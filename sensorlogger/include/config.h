@@ -33,5 +33,7 @@
 
 #define PIN_SPEAKER             GPIO_NUM_25
 
+#define PIN_MAX1_CS			    GPIO_NUM_16
+
 #endif // __CONFIG_H
 

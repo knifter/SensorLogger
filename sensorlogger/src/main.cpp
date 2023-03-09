@@ -5,6 +5,9 @@
 #include "settings.h"
 #include "screens.h"
 
+#include <MAX31856.h>
+#include <MPRLS.h>
+
 //#include "tools-log.h"
 
 void halt(const char*);
@@ -25,15 +28,29 @@ void setup()
 	gui.begin();
 
     // Initialize sensors etc
+    temp1.begin();
 
     // Bootstrap
     ScreenPtr scr = std::make_shared<BootScreen>(gui);
     gui.pushScreen(scr);
+    DBG("setup() done.");
 };
 
 void loop()
 {
     soogh_event_t e = static_cast<soogh_event_t>(key2event(scan_keys()));
+
+    time_t now = millis();
+    static time_t last = now;
+    if((now - last) > 500)
+    {
+        float T = temp1.readThermocoupleTemperature();
+        float C = temp1.readCJTemperature();
+        uint8_t f = temp1.getFault();
+
+        INFO("status = %d, JC = %f, Temp = %f", f, C, T);
+        last = now;
+    };
 	gui.handle(e);
 
 	setman.loop();
