@@ -12,6 +12,8 @@ extern SettingsManager setman;
 extern GUI gui;
 
 extern MAX31856 temp1;
-// extern MPRLS pres1;
+extern MAX31856 temp2;
+extern MPRLS pres1;
+extern MPRLS pres2;
 
 #endif //__GLOBALS_H

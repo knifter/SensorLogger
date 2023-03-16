@@ -10,6 +10,8 @@
 #define VERSIONSTR_LONG        STRINGIFY(GIT_BRANCH-VERSION)
 #define VERSIONSTR_SHORT       STRINGIFY(VERSION)
 
+#define LOOP_INTERVAL_MS       500
+
 #ifdef DEBUG
 	// Enable DBG(...) globally:
 	// #define TOOLS_LOG_DEBUG
@@ -22,18 +24,22 @@
 
 #define BOOTSCREEN_TIMEOUT_MS   2000
 
-// PINS
-#define PIN_MOSI				GPIO_NUM_12
-#define PIN_MISO				GPIO_NUM_13
-#define PIN_SCLK				GPIO_NUM_14
+#define PIN_SDA0                GPIO_NUM_21 // default
+#define PIN_SCL0                GPIO_NUM_22 // default
 
-#define PIN_BTN_A				GPIO_NUM_34
-#define PIN_BTN_B 				GPIO_NUM_35
-#define PIN_BTN_C 				GPIO_NUM_36
+#define PIN_SCL1                GPIO_NUM_13
+#define PIN_SDA1                GPIO_NUM_15
+// Wire0 = Wire, SDA = 21, SCL = 22
+
+
+#define PIN_BTN_A				GPIO_NUM_39
+#define PIN_BTN_B 				GPIO_NUM_38
+#define PIN_BTN_C 				GPIO_NUM_37
 
 #define PIN_SPEAKER             GPIO_NUM_25
 
 #define PIN_MAX1_CS			    GPIO_NUM_16
+#define PIN_MAX2_CS			    GPIO_NUM_17
 
 #endif // __CONFIG_H
 
